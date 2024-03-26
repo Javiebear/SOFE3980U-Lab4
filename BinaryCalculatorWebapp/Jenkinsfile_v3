@@ -1,12 +1,10 @@
 pipeline {
   environment {
-
     PROJECT = "mindful-silo-415800"
     APP_NAME = "binary-calculator2"
-    FE_SVC_NAME = "${APP_NAME}-frontend"
     CLUSTER = "sofe3980u"
     CLUSTER_ZONE = "northamerica-northeast1-b"
-    IMAGE_TAG = "gcr.io/${PROJECT}/${APP_NAME}:${env.BRANCH_NAME}.${env.BUILD_NUMBER}"
+    IMAGE_TAG = "gcr.io/${PROJECT}/${APP_NAME}"
     JENKINS_CRED = "${PROJECT}"
   }
 agent {
