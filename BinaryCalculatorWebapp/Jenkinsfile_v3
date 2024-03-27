@@ -1,9 +1,11 @@
 pipeline {
-   environment {
+  environment {
     PROJECT = "mindful-silo-415800"
-    APP_NAME = "BinaryCalculatorWebApplication"
+    APP_NAME = "BinaryCalculatorWebApp"
+    FE_SVC_NAME = "${APP_NAME}-frontend"
     CLUSTER = "sofe3980u"
     CLUSTER_ZONE = "northamerica-northeast1-b"
+    IMAGE_TAG = "gcr.io/${PROJECT}/${APP_NAME}:${env.BRANCH_NAME}.${env.BUILD_NUMBER}"
     JENKINS_CRED = "${PROJECT}"
   }
 
